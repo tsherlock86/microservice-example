@@ -24,7 +24,7 @@ get '/forecast/:location' do
 
   url = 'https://api.darksky.net/forecast/32751df79f6c9f93897968c0d588dd69/'
 
-  response = HTTParty.get(url + coordinates.first.to_f + ',' + coordinates.last.to_f)
+  response = HTTParty.get(url + coordinates.first.to_s + ',' + coordinates.last.to_s)
 
   {
     weather: JSON.parse(response.body)
