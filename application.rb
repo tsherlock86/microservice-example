@@ -1,4 +1,5 @@
-requre 'sinatra'
+require 'sinatra'
+require 'geocoder'
 
 get '/' do 
   'Hello World'
